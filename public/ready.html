@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Reddit API Redirect Target</title>
+    <script defer src="reddit-test.js"></script>
+    <style>
+      .api_info {
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 4px;
+      }
+
+      .user_input {
+        margin-top: 10px;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid grey;
+        border-radius: 3px;
+        padding: 4px;
+      }
+
+      .raw_output {
+        white-space: pre;
+        font-family: 'Courier New', Courier, monospace;
+        max-height: 900px;
+        overflow-y: auto;
+      }
+
+      #reddit_api_form {
+        margin: 0px;
+      }
+
+      .info_label {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="api_info">
+      <u><b>API Info</b></u><br />
+      <span class="info_label">Access Token:</span>
+      <span id="reddit_access_token">Unknown</span><br />
+      <span class="info_label">Token Expires:</span>
+      <span id="reddit_token_expires">Unknown</span><br />
+      <span class="info_label">Refresh Token:</span>
+      <span id="reddit_refresh_token">Unknown</span><br />
+      <a href="/">Login Again</a>
+    </div>
+    <div class="user_input">
+      <form id="reddit_api_form" action="/reddit-api" method="get">
+        <span class="info_label">Reddit Endpoint:</span>
+        <input id="reddit_endpoint" type="text" placeholder="api/v1/me" />
+        <input type="submit">
+      </form><br />
+      <u><b>API Output</b></u>
+      <div class="raw_output"></div>
+    </div>
+  </body>
+</html>
