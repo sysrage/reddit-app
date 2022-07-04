@@ -3,6 +3,9 @@
     <title>Reddit API Redirect Target</title>
     <script defer src="reddit-test.js"></script>
     <style>
+      body {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+      }
       .api_info {
         width: 98%;
         margin-left: auto;
@@ -23,6 +26,8 @@
       }
 
       .raw_output {
+        background-color: lightgrey;
+        margin: 6px;
         white-space: pre;
         font-family: 'Courier New', Courier, monospace;
         max-height: 900px;
@@ -56,6 +61,7 @@
         <input type="submit">
       </form><br />
       <u><b>API Output</b></u>
+      <hr />
       <div class="raw_output"></div>
     </div>
   </body>
